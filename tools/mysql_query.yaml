@@ -1,0 +1,80 @@
+description:
+  human:
+    en_US: Execute SQL query on MySQL database
+    zh_Hans: 执行MySQL数据库查询
+  llm: A tool for executing SQL queries on MySQL databases
+extra:
+  python:
+    source: tools/mysql_query.py
+identity:
+  author: youdianzhizhuo
+  icon: mysql.png
+  label:
+    en_US: MySQL Query
+    zh_Hans: MySQL查询
+  name: mysql_query
+parameters:
+- form: form
+  human_description:
+    en_US: MySQL server host address
+    zh_Hans: MySQL服务器地址
+  label:
+    en_US: Host
+    zh_Hans: 主机地址
+  name: host
+  required: true
+  type: string
+- default: 3306
+  form: form
+  human_description:
+    en_US: MySQL server port
+    zh_Hans: MySQL服务器端口
+  label:
+    en_US: Port
+    zh_Hans: 端口
+  max: 65535
+  min: 1
+  name: port
+  required: true
+  type: number
+- form: form
+  human_description:
+    en_US: Database username
+    zh_Hans: 数据库用户名
+  label:
+    en_US: Username
+    zh_Hans: 用户名
+  name: username
+  required: true
+  type: string
+- form: form
+  human_description:
+    en_US: Database password
+    zh_Hans: 数据库密码
+  label:
+    en_US: Password
+    zh_Hans: 密码
+  name: password
+  required: true
+  type: secret-input
+- form: form
+  human_description:
+    en_US: Database name
+    zh_Hans: 数据库名称
+  label:
+    en_US: Database
+    zh_Hans: 数据库名
+  name: database
+  required: true
+  type: string
+- form: llm
+  human_description:
+    en_US: SQL query to execute
+    zh_Hans: 要执行的SQL语句
+  label:
+    en_US: SQL Query
+    zh_Hans: SQL语句
+  llm_description: Valid SQL SELECT statement to execute
+  name: query
+  required: true
+  type: string

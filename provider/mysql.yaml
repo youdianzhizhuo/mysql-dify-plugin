@@ -1,0 +1,17 @@
+extra:
+  python:
+    source: provider/mysql.py
+identity:
+  author: youdianzhizhuo
+  description:
+    en_US: MySQL database connector
+    zh_Hans: MySQL数据库连接器
+  icon: mysql.png
+  label:
+    en_US: MySQL
+    zh_Hans: MySQL数据库
+  name: mysql
+  tags:
+  - other
+tools:
+- tools/mysql_query.yaml
