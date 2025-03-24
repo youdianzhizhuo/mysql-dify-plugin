@@ -12,11 +12,11 @@ meta:
   - amd64
   - arm64
   runner:
-    entrypoint: main.py
+    entrypoint: main
     language: python
     version: '3.12'
   version: 0.0.1
-name: mysql-connector
+name: mysql-dify-plugin
 plugins:
   tools:
   - provider/mysql.yaml
