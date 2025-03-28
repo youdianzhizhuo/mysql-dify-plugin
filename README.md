@@ -6,7 +6,7 @@
 
 ### Description
 MySQL 连接并执行SQL语句查询的dify插件。
-
+用于AI研究
 
 
 
